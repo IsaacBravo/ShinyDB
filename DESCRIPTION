@@ -1,0 +1,10 @@
+Package: ShinyDB
+Type: Package
+Title: Database Management Shiny App
+Version: 0.1.0
+Author: Isaac Bravo
+Maintainer: The package maintainer <isaac.bravo@tum.de>
+Description: This Shiny App is designed to help you manage and analyze data from your database efficiently.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
