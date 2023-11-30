@@ -16,5 +16,5 @@ Load the package and initiate the Shiny app with the following commands:
 
 ``` r
 library(ShinyDB)
-TextAnalizer::launchApp()
+ShinyDB::launchApp()
 ```
