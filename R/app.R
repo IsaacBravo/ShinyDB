@@ -736,12 +736,24 @@ launchApp <- function() {
       }
 
       DT::datatable(data(),
-                    extensions = "Buttons",
-                    options = list(
-                      dom = 'Bfrtip',
-                      pageLength = 1,
-                      buttons = c('copy', 'csv', 'json', 'txt'))
-      )
+                    style = 'bootstrap',
+                    rownames = FALSE,
+                    extensions = c('Buttons', 'FixedHeader', 'KeyTable'),
+                    plugins = 'natural',
+                    options = list(dom = 'Bfrtip', pageLength = 1, buttons = list(
+                      list(extend = "collection", buttons = c('csv', 'excel', 'pdf'),
+                           text = "Download Current Page", filename = "page",
+                           exportOptions = list(
+                             modifier = list(page = "current")
+                           )
+                      ),
+                      list(extend = "collection", buttons = c('csv', 'excel', 'pdf'),
+                           text = "Download Full Results", filename = "data",
+                           exportOptions = list(
+                             modifier = list(page = "all")
+                           )
+                      )
+                    )))
 
 
     })
